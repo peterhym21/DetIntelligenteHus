@@ -4,6 +4,10 @@
 
 Main.cpp
 
+Menu\Menu.cpp
+
+NFC\KeyCardAccess.cpp
+
 src\libraries\Adafruit_BusIO\Adafruit_BusIO_Register.cpp
 
 src\libraries\Adafruit_BusIO\Adafruit_I2CDevice.cpp
@@ -37,6 +41,10 @@ src\libraries\Keypad\src\Key.cpp
 src\libraries\Keypad\src\Keypad.cpp
 
 src\libraries\LiquidCrystal\src\LiquidCrystal.cpp
+
+src\libraries\MFRC522\src\MFRC522.cpp
+
+src\libraries\MFRC522\src\MFRC522Extended.cpp
 
 src\libraries\Servo\src\avr\Servo.cpp
 

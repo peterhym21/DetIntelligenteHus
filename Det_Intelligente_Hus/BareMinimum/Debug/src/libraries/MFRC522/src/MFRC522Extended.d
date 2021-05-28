@@ -1,4 +1,7 @@
-Main.d Main.o: .././Main.cpp .././Main.h \
+src/libraries/MFRC522/src/MFRC522Extended.d \
+ src/libraries/MFRC522/src/MFRC522Extended.o: \
+ ../src/libraries/MFRC522/src/MFRC522Extended.cpp \
+ ..\include\libraries\MFRC522\src/MFRC522Extended.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
@@ -34,21 +37,12 @@ Main.d Main.o: .././Main.cpp .././Main.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h \
- ..\include\libraries\SPI\src/SPI.h ..\include\libraries\Wire\src/Wire.h \
- ..\\..\ArduinoCore\include\core/Stream.h \
- ..\include\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
- ..\\..\ArduinoCore\include\core/Print.h \
- ..\include\libraries\Adafruit_GFX_Library/gfxfont.h \
- ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h \
  ..\include\libraries\MFRC522\src/MFRC522.h \
  ..\include\libraries\MFRC522\src/require_cpp11.h \
- ..\include\libraries\MFRC522\src/deprecated.h .././NFC/KeyCardAccess.h \
- .././NFC/../Menu/Menu.h \
- ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h \
- ..\include\libraries\Keypad\src/Keypad.h \
- ..\include\libraries\Keypad\src/Key.h .././Menu/Menu.h
+ ..\include\libraries\MFRC522\src/deprecated.h \
+ ..\include\libraries\SPI\src/SPI.h
 
-.././Main.h:
+..\include\libraries\MFRC522\src/MFRC522Extended.h:
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -120,34 +114,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h:
 
-..\include\libraries\SPI\src/SPI.h:
-
-..\include\libraries\Wire\src/Wire.h:
-
-..\\..\ArduinoCore\include\core/Stream.h:
-
-..\include\libraries\Adafruit_GFX_Library/Adafruit_GFX.h:
-
-..\\..\ArduinoCore\include\core/Print.h:
-
-..\include\libraries\Adafruit_GFX_Library/gfxfont.h:
-
-..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h:
-
 ..\include\libraries\MFRC522\src/MFRC522.h:
 
 ..\include\libraries\MFRC522\src/require_cpp11.h:
 
 ..\include\libraries\MFRC522\src/deprecated.h:
 
-.././NFC/KeyCardAccess.h:
-
-.././NFC/../Menu/Menu.h:
-
-..\include\libraries\LiquidCrystal\src/LiquidCrystal.h:
-
-..\include\libraries\Keypad\src/Keypad.h:
-
-..\include\libraries\Keypad\src/Key.h:
-
-.././Menu/Menu.h:
+..\include\libraries\SPI\src/SPI.h:

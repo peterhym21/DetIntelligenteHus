@@ -1,4 +1,4 @@
-Main.d Main.o: .././Main.cpp .././Main.h \
+Menu/Menu.d Menu/Menu.o: ../Menu/Menu.cpp ../Menu/Menu.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
@@ -40,15 +40,11 @@ Main.d Main.o: .././Main.cpp .././Main.h \
  ..\\..\ArduinoCore\include\core/Print.h \
  ..\include\libraries\Adafruit_GFX_Library/gfxfont.h \
  ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h \
- ..\include\libraries\MFRC522\src/MFRC522.h \
- ..\include\libraries\MFRC522\src/require_cpp11.h \
- ..\include\libraries\MFRC522\src/deprecated.h .././NFC/KeyCardAccess.h \
- .././NFC/../Menu/Menu.h \
  ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h \
  ..\include\libraries\Keypad\src/Keypad.h \
- ..\include\libraries\Keypad\src/Key.h .././Menu/Menu.h
+ ..\include\libraries\Keypad\src/Key.h
 
-.././Main.h:
+../Menu/Menu.h:
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -134,20 +130,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h:
 
-..\include\libraries\MFRC522\src/MFRC522.h:
-
-..\include\libraries\MFRC522\src/require_cpp11.h:
-
-..\include\libraries\MFRC522\src/deprecated.h:
-
-.././NFC/KeyCardAccess.h:
-
-.././NFC/../Menu/Menu.h:
-
 ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h:
 
 ..\include\libraries\Keypad\src/Keypad.h:
 
 ..\include\libraries\Keypad\src/Key.h:
-
-.././Menu/Menu.h:
