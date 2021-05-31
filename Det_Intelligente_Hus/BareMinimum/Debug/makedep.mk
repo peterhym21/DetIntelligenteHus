@@ -2,7 +2,19 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+DHT11\DHT11.cpp
+
+LCD\LCD.cpp
+
+Light\Light.cpp
+
 Main.cpp
+
+Menu\Menu.cpp
+
+Moters\FanMoter.cpp
+
+NFC\KeyCardAccess.cpp
 
 src\libraries\Adafruit_BusIO\Adafruit_BusIO_Register.cpp
 
@@ -38,6 +50,10 @@ src\libraries\Keypad\src\Keypad.cpp
 
 src\libraries\LiquidCrystal\src\LiquidCrystal.cpp
 
+src\libraries\MFRC522\src\MFRC522.cpp
+
+src\libraries\MFRC522\src\MFRC522Extended.cpp
+
 src\libraries\Servo\src\avr\Servo.cpp
 
 src\libraries\Servo\src\mbed\Servo.cpp
@@ -61,4 +77,6 @@ src\libraries\TimerThree\TimerThree.cpp
 src\libraries\Wire\src\utility\twi.c
 
 src\libraries\Wire\src\Wire.cpp
+
+TimeAndDate\TimeAndDate.cpp
 
