@@ -42,11 +42,27 @@ Main.d Main.o: .././Main.cpp .././Main.h \
  ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h \
  ..\include\libraries\MFRC522\src/MFRC522.h \
  ..\include\libraries\MFRC522\src/require_cpp11.h \
- ..\include\libraries\MFRC522\src/deprecated.h .././NFC/KeyCardAccess.h \
- .././NFC/../Menu/Menu.h \
- ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h \
+ ..\include\libraries\MFRC522\src/deprecated.h \
+ ..\include\libraries\TimerOne/TimerOne.h \
+ ..\include\libraries\TimerOne/config/known_16bit_timers.h \
+ .././NFC/KeyCardAccess.h .././NFC/../Menu/Menu.h \
  ..\include\libraries\Keypad\src/Keypad.h \
- ..\include\libraries\Keypad\src/Key.h .././Menu/Menu.h
+ ..\include\libraries\Keypad\src/Key.h .././NFC/../Menu/../DHT11/DHT11.h \
+ ..\include\libraries\DHT_sensor_library/DHT.h \
+ .././NFC/../Menu/../DHT11/../Light/Light.h \
+ .././NFC/../Menu/../DHT11/../Moters/FanMoter.h \
+ .././NFC/../Menu/../LCD/LCD.h \
+ ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h \
+ ..\include\libraries\Adafruit_BusIO/../DS3231/DS3231.h \
+ .././NFC/../Menu/../LCD/../TimeAndDate/TimeAndDate.h \
+ ..\include\libraries\DS3231/DS3231.h \
+ .././NFC/../Menu/../TimeAndDate/TimeAndDate.h .././Menu/Menu.h \
+ .././Menu/../DHT11/DHT11.h .././Menu/../DHT11/../Light/Light.h \
+ .././Menu/../DHT11/../Moters/FanMoter.h .././Menu/../LCD/LCD.h \
+ .././Menu/../LCD/../TimeAndDate/TimeAndDate.h \
+ .././Menu/../TimeAndDate/TimeAndDate.h .././DHT11/DHT11.h \
+ .././DHT11/../Light/Light.h .././DHT11/../Moters/FanMoter.h \
+ .././TimeAndDate/TimeAndDate.h .././Light/Light.h
 
 .././Main.h:
 
@@ -140,14 +156,58 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\include\libraries\MFRC522\src/deprecated.h:
 
+..\include\libraries\TimerOne/TimerOne.h:
+
+..\include\libraries\TimerOne/config/known_16bit_timers.h:
+
 .././NFC/KeyCardAccess.h:
 
 .././NFC/../Menu/Menu.h:
-
-..\include\libraries\LiquidCrystal\src/LiquidCrystal.h:
 
 ..\include\libraries\Keypad\src/Keypad.h:
 
 ..\include\libraries\Keypad\src/Key.h:
 
+.././NFC/../Menu/../DHT11/DHT11.h:
+
+..\include\libraries\DHT_sensor_library/DHT.h:
+
+.././NFC/../Menu/../DHT11/../Light/Light.h:
+
+.././NFC/../Menu/../DHT11/../Moters/FanMoter.h:
+
+.././NFC/../Menu/../LCD/LCD.h:
+
+..\include\libraries\LiquidCrystal\src/LiquidCrystal.h:
+
+..\include\libraries\Adafruit_BusIO/../DS3231/DS3231.h:
+
+.././NFC/../Menu/../LCD/../TimeAndDate/TimeAndDate.h:
+
+..\include\libraries\DS3231/DS3231.h:
+
+.././NFC/../Menu/../TimeAndDate/TimeAndDate.h:
+
 .././Menu/Menu.h:
+
+.././Menu/../DHT11/DHT11.h:
+
+.././Menu/../DHT11/../Light/Light.h:
+
+.././Menu/../DHT11/../Moters/FanMoter.h:
+
+.././Menu/../LCD/LCD.h:
+
+.././Menu/../LCD/../TimeAndDate/TimeAndDate.h:
+
+.././Menu/../TimeAndDate/TimeAndDate.h:
+
+.././DHT11/DHT11.h:
+
+.././DHT11/../Light/Light.h:
+
+.././DHT11/../Moters/FanMoter.h:
+
+.././TimeAndDate/TimeAndDate.h:
+
+.././Light/Light.h:

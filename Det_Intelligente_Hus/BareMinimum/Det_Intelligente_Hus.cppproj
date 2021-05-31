@@ -326,6 +326,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DHT11\DHT11.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DHT11\DHT11.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\libraries\Adafruit_BusIO\Adafruit_BusIO_Register.h">
       <SubType>compile</SubType>
     </Compile>
@@ -596,6 +602,18 @@
     <Compile Include="include\libraries\Wire\src\Wire.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="LCD\LCD.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Light\Light.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Light\Light.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Main.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -606,6 +624,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Menu\Menu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Moters\FanMoter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Moters\FanMoter.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="NFC\KeyCardAccess.cpp">
@@ -707,6 +731,12 @@
     <Compile Include="src\libraries\Wire\src\Wire.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="TimeAndDate\TimeAndDate.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TimeAndDate\TimeAndDate.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Content Include="readme.html">
     </Content>
   </ItemGroup>
@@ -754,6 +784,13 @@
     <Folder Include="include\libraries\Wire\src\" />
     <Folder Include="include\libraries\Wire\src\utility\" />
     <Folder Include="Menu" />
+    <Folder Include="DHT11" />
+    <Folder Include="LCD" />
+    <Folder Include="Light" />
+    <Folder Include="Moters" />
+    <Folder Include="src\libraries\TimerOne\" />
+    <Folder Include="src\libraries\TimerThree\" />
+    <Folder Include="TimeAndDate" />
     <Folder Include="NFC" />
     <Folder Include="src\" />
     <Folder Include="src\libraries\" />
@@ -783,8 +820,6 @@
     <Folder Include="src\libraries\Servo\src\stm32f4\" />
     <Folder Include="src\libraries\SPI\" />
     <Folder Include="src\libraries\SPI\src\" />
-    <Folder Include="src\libraries\TimerOne\" />
-    <Folder Include="src\libraries\TimerThree\" />
     <Folder Include="src\libraries\Wire\" />
     <Folder Include="src\libraries\Wire\src\" />
     <Folder Include="src\libraries\Wire\src\utility\" />

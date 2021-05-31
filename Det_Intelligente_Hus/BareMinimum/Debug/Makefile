@@ -69,6 +69,13 @@ SUBDIRS :=  \
 ../include/libraries/Wire/src/ \
 ../include/libraries/Wire/src/utility/ \
 ../Menu \
+../DHT11 \
+../LCD \
+../Light \
+../Moters \
+../src/libraries/TimerOne/ \
+../src/libraries/TimerThree/ \
+../TimeAndDate \
 ../NFC \
 ../src/ \
 ../src/libraries/ \
@@ -98,8 +105,6 @@ SUBDIRS :=  \
 ../src/libraries/Servo/src/stm32f4/ \
 ../src/libraries/SPI/ \
 ../src/libraries/SPI/src/ \
-../src/libraries/TimerOne/ \
-../src/libraries/TimerThree/ \
 ../src/libraries/Wire/ \
 ../src/libraries/Wire/src/ \
 ../src/libraries/Wire/src/utility/
@@ -107,8 +112,12 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../DHT11/DHT11.cpp \
+../LCD/LCD.cpp \
+../Light/Light.cpp \
 ../Main.cpp \
 ../Menu/Menu.cpp \
+../Moters/FanMoter.cpp \
 ../NFC/KeyCardAccess.cpp \
 ../src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp \
 ../src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp \
@@ -140,7 +149,8 @@ C_SRCS +=  \
 ../src/libraries/TimerOne/TimerOne.cpp \
 ../src/libraries/TimerThree/TimerThree.cpp \
 ../src/libraries/Wire/src/utility/twi.c \
-../src/libraries/Wire/src/Wire.cpp
+../src/libraries/Wire/src/Wire.cpp \
+../TimeAndDate/TimeAndDate.cpp
 
 
 PREPROCESSING_SRCS += 
@@ -150,8 +160,12 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+DHT11/DHT11.o \
+LCD/LCD.o \
+Light/Light.o \
 Main.o \
 Menu/Menu.o \
+Moters/FanMoter.o \
 NFC/KeyCardAccess.o \
 src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.o \
 src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.o \
@@ -183,11 +197,16 @@ src/libraries/SPI/src/SPI.o \
 src/libraries/TimerOne/TimerOne.o \
 src/libraries/TimerThree/TimerThree.o \
 src/libraries/Wire/src/utility/twi.o \
-src/libraries/Wire/src/Wire.o
+src/libraries/Wire/src/Wire.o \
+TimeAndDate/TimeAndDate.o
 
 OBJS_AS_ARGS +=  \
+DHT11/DHT11.o \
+LCD/LCD.o \
+Light/Light.o \
 Main.o \
 Menu/Menu.o \
+Moters/FanMoter.o \
 NFC/KeyCardAccess.o \
 src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.o \
 src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.o \
@@ -219,11 +238,16 @@ src/libraries/SPI/src/SPI.o \
 src/libraries/TimerOne/TimerOne.o \
 src/libraries/TimerThree/TimerThree.o \
 src/libraries/Wire/src/utility/twi.o \
-src/libraries/Wire/src/Wire.o
+src/libraries/Wire/src/Wire.o \
+TimeAndDate/TimeAndDate.o
 
 C_DEPS +=  \
+DHT11/DHT11.d \
+LCD/LCD.d \
+Light/Light.d \
 Main.d \
 Menu/Menu.d \
+Moters/FanMoter.d \
 NFC/KeyCardAccess.d \
 src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.d \
 src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.d \
@@ -255,11 +279,16 @@ src/libraries/SPI/src/SPI.d \
 src/libraries/TimerOne/TimerOne.d \
 src/libraries/TimerThree/TimerThree.d \
 src/libraries/Wire/src/utility/twi.d \
-src/libraries/Wire/src/Wire.d
+src/libraries/Wire/src/Wire.d \
+TimeAndDate/TimeAndDate.d
 
 C_DEPS_AS_ARGS +=  \
+DHT11/DHT11.d \
+LCD/LCD.d \
+Light/Light.d \
 Main.d \
 Menu/Menu.d \
+Moters/FanMoter.d \
 NFC/KeyCardAccess.d \
 src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.d \
 src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.d \
@@ -291,7 +320,8 @@ src/libraries/SPI/src/SPI.d \
 src/libraries/TimerOne/TimerOne.d \
 src/libraries/TimerThree/TimerThree.d \
 src/libraries/Wire/src/utility/twi.d \
-src/libraries/Wire/src/Wire.d
+src/libraries/Wire/src/Wire.d \
+TimeAndDate/TimeAndDate.d
 
 OUTPUT_FILE_PATH +=Det_Intelligente_Hus.elf
 
@@ -308,6 +338,27 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+DHT11/DHT11.o: ../DHT11/DHT11.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+LCD/LCD.o: ../LCD/LCD.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Light/Light.o: ../Light/Light.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./Main.o: .././Main.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
@@ -316,6 +367,13 @@ LINKER_SCRIPT_DEP+=
 	
 
 Menu/Menu.o: ../Menu/Menu.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Moters/FanMoter.o: ../Moters/FanMoter.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
@@ -540,6 +598,13 @@ src/libraries/Wire/src/utility/twi.o: ../src/libraries/Wire/src/utility/twi.c
 	
 
 src/libraries/Wire/src/Wire.o: ../src/libraries/Wire/src/Wire.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+TimeAndDate/TimeAndDate.o: ../TimeAndDate/TimeAndDate.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108013 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\Adafruit_Unified_Sensor" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\DS3231" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\TimerOne" -I"..\include\libraries\TimerOne\config" -I"..\include\libraries\TimerThree" -I"..\include\libraries\TimerThree\config" -I"..\include\libraries\SPI\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\MFRC522\src"  -Os -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

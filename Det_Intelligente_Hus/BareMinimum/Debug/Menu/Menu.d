@@ -40,9 +40,18 @@ Menu/Menu.d Menu/Menu.o: ../Menu/Menu.cpp ../Menu/Menu.h \
  ..\\..\ArduinoCore\include\core/Print.h \
  ..\include\libraries\Adafruit_GFX_Library/gfxfont.h \
  ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h \
- ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h \
  ..\include\libraries\Keypad\src/Keypad.h \
- ..\include\libraries\Keypad\src/Key.h
+ ..\include\libraries\Keypad\src/Key.h ../Menu/../DHT11/DHT11.h \
+ ..\include\libraries\DHT_sensor_library/DHT.h \
+ ../Menu/../DHT11/../Light/Light.h ../Menu/../DHT11/../Moters/FanMoter.h \
+ ..\include\libraries\TimerOne/TimerOne.h \
+ ..\include\libraries\TimerOne/config/known_16bit_timers.h \
+ ../Menu/../LCD/LCD.h \
+ ..\include\libraries\LiquidCrystal\src/LiquidCrystal.h \
+ ..\include\libraries\Adafruit_BusIO/../DS3231/DS3231.h \
+ ../Menu/../LCD/../TimeAndDate/TimeAndDate.h \
+ ..\include\libraries\DS3231/DS3231.h \
+ ../Menu/../TimeAndDate/TimeAndDate.h
 
 ../Menu/Menu.h:
 
@@ -130,8 +139,30 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h:
 
-..\include\libraries\LiquidCrystal\src/LiquidCrystal.h:
-
 ..\include\libraries\Keypad\src/Keypad.h:
 
 ..\include\libraries\Keypad\src/Key.h:
+
+../Menu/../DHT11/DHT11.h:
+
+..\include\libraries\DHT_sensor_library/DHT.h:
+
+../Menu/../DHT11/../Light/Light.h:
+
+../Menu/../DHT11/../Moters/FanMoter.h:
+
+..\include\libraries\TimerOne/TimerOne.h:
+
+..\include\libraries\TimerOne/config/known_16bit_timers.h:
+
+../Menu/../LCD/LCD.h:
+
+..\include\libraries\LiquidCrystal\src/LiquidCrystal.h:
+
+..\include\libraries\Adafruit_BusIO/../DS3231/DS3231.h:
+
+../Menu/../LCD/../TimeAndDate/TimeAndDate.h:
+
+..\include\libraries\DS3231/DS3231.h:
+
+../Menu/../TimeAndDate/TimeAndDate.h:

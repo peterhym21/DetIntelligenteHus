@@ -2,9 +2,17 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+DHT11\DHT11.cpp
+
+LCD\LCD.cpp
+
+Light\Light.cpp
+
 Main.cpp
 
 Menu\Menu.cpp
+
+Moters\FanMoter.cpp
 
 NFC\KeyCardAccess.cpp
 
@@ -69,4 +77,6 @@ src\libraries\TimerThree\TimerThree.cpp
 src\libraries\Wire\src\utility\twi.c
 
 src\libraries\Wire\src\Wire.cpp
+
+TimeAndDate\TimeAndDate.cpp
 
