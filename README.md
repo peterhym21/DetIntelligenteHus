@@ -10,10 +10,11 @@ Dette er selvfølig kun toppen af det, men neden under har jeg en præciserede lis
 
 Det skal dog siges at dette er kun en prototype på forslag til hvordan fremtidens huse kunne blive til
 
-## Diagrams
+## Diagramer
 
 ![Flow Chart](Det_intilligente_Hus.png)
 
+![Flow Chart](Det_Intellligente_hus_Menu.png)
 
 ## Hardware Details
 
