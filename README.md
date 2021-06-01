@@ -10,6 +10,10 @@ Dette er selvfølig kun toppen af det, men neden under har jeg en præciserede lis
 
 Det skal dog siges at dette er kun en prototype på forslag til hvordan fremtidens huse kunne blive til
 
+## Diagrams
+
+![Flow Chart](Documentation/Det_intilligente_Hus.png)
+
 
 ## Hardware Details
 
@@ -32,6 +36,8 @@ Yderliger skal der bruges følgende:
 - Rød, Grøn, Blå singe LED
 - 6 220 Ohm Modstand
 - 4 Potentiometere
+- Servo moter
+- HC-SR04 ultralyds sensor
 - en masse ledninger
 
 
@@ -79,9 +85,40 @@ Yderliger skal der bruges følgende:
 
 [NewPing](https://playground.arduino.cc/Code/NewPing/)
 
-## Diagrams
+### Pins
 
-![Flow Chart]()
+- DHT11: Pin 2
+- HC-SR04: Triger Pin 3, Echo Pin 4
+- LCD
+        - LCD RS pin to digital pin 22
+        - LCD Enable pin (E) to digital pin 23
+        - LCD D4 pin to digital pin 24
+        - LCD D5 pin to digital pin 25
+        - LCD D6 pin to digital pin 26
+        - LCD D7 pin to digital pin 27
+        - LCD R/W pin to ground
+        - LCD VSS pin to ground
+        - LCD VCC/VDD pin to 5V
+        - 10K resistor:
+        - ends to +5V and ground
+        - wiper to LCD VO
+- Light
+        - RedRGB pin 42
+        - GreenRGB pin 43
+        - BlueRGB pin 44
+        - RedLED pin 9
+        - GreenLED pin 7
+        - BlueLED pin 8
+- DC moter Pin 12
+- Keypad:
+        - rowPins: 32, 33, 34, 35 //connect to the row pinouts of the keypad
+        - colPins: 36, 37, 38, 39 //connect to the column pinouts of the keypad
+- NFC / RFID
+        - RST_PIN   5
+        - SS_PIN    53
+- servopin pin 10
+- OLED pin 20,21 (SCL og SDA)
+- Real time clock pin SCL og SDA
 
 ## Deployment
 

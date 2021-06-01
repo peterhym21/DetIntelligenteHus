@@ -68,6 +68,7 @@ void loop()
 	{
 		if ( !mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial() )
 		{
+			delay(50);
 			return;
 		}
 		String UID = ReadUID();

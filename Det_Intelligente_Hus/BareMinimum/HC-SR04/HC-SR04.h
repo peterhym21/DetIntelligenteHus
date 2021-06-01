@@ -1,8 +1,8 @@
 #include <Arduino.h> 
 #include <HCSR04.h>
 
-extern int trigPin;    // Trigger
-extern int echoPin;    // Echo
+#define trigPin = 3;    // Trigger
+#define echoPin = 4;    // Echo
 extern HCSR04 hc;
 
 int GetDistance();
