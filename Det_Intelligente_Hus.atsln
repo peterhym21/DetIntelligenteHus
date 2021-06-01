@@ -13,7 +13,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagrams", "Diagrams", "{E324E5FA-F7E5-4D2E-919A-E5ECB5C195F8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E324E5FA-F7E5-4D2E-919A-E5ECB5C195F8}"
+	ProjectSection(SolutionItems) = preProject
+		Det_Intellligente_hus_Menu.png = Det_Intellligente_hus_Menu.png
+		Det_intilligente_Hus.png = Det_intilligente_Hus.png
+		OLED Display I2C.sal = OLED Display I2C.sal
+		OLED_Display_I2C.png = OLED_Display_I2C.png
+		RFID SPI.sal = RFID SPI.sal
+		RFID_SPI.png = RFID_SPI.png
+		Singewire.sal = Singewire.sal
+		Singewire_Zumed_In.png = Singewire_Zumed_In.png
+		Singewire_Zumed_Out.png = Singewire_Zumed_Out.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
