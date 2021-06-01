@@ -41,49 +41,6 @@ Yderliger skal der bruges følgende:
 - HC-SR04 ultralyds sensor
 - en masse ledninger
 
-
-## Tools
-
-[Microchip Studio for AVR and SAM Devices 7.0.2542](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices#Downloads)
-
-[Draw.io](https://app.diagrams.net/)
-
-[Visual Studio Code version 1.56](https://code.visualstudio.com/)
-
-[Git 2.31.1](https://git-scm.com/downloads)
-
-## Librayes
-
-[Adafruit_BusIO 1.7.3](https://github.com/adafruit/Adafruit_BusIO)
-
-[Adafruit_GFX_Library 1.10.10](https://github.com/adafruit/Adafruit-GFX-Library)
-
-[Adafruit_SSD1306 2.4.5](https://github.com/adafruit/Adafruit_SSD1306)
-
-[AdaFruit_unified_sensor 1.1.4](https://github.com/adafruit/Adafruit_Sensor)
-
-[DHT_sesnor_libaray 1.4.2](https://github.com/adafruit/DHT-sensor-library)
-
-[DS3231 1.0.7](https://github.com/jarzebski/Arduino-DS3231)
-
-[Keypad 1.0.2](https://playground.arduino.cc/Code/Keypad/)
-
-[LiquidCrystal 1.0.7](https://www.arduino.cc/en/Reference/LiquidCrystal)
-
-[MFRC522 1.4.8](https://github.com/miguelbalboa/rfid)
-
-[Servo 1.1.7](https://www.arduino.cc/reference/en/libraries/servo/)
-
-[SPI](https://www.arduino.cc/en/reference/SPI)
-
-[TimerOne 1.1.0](https://playground.arduino.cc/Code/Timer1/)
-
-[TimerThree 1.1.0](https://playground.arduino.cc/Code/Timer1/)
-
-[Wire](https://www.arduino.cc/en/reference/wire)
-
-[HCSR04-ultrasonic-sensor-lib 2.2.0](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib)
-
 ### Pins
 
 - DHT11: Pin 2
@@ -119,6 +76,35 @@ Yderliger skal der bruges følgende:
 - OLED pin 20,21 (SCL og SDA)
 - Real time clock pin SCL og SDA
 
+
+## Tools
+
+[Microchip Studio for AVR and SAM Devices 7.0.2542](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices#Downloads)
+
+[Draw.io](https://app.diagrams.net/)
+
+[Visual Studio Code version 1.56](https://code.visualstudio.com/)
+
+[Git 2.31.1](https://git-scm.com/downloads)
+
+## Librayes
+| Libraries                                                                                | Version |
+| :--------------------------------------------------------------------------------------- | ------- |
+| [Adafruit_BusIO](https://github.com/adafruit/Adafruit_BusIO)                             | 1.7.3   |
+| [Adafruit_GFX_Library](https://github.com/adafruit/Adafruit-GFX-Library)                 | 1.10.10 |
+| [Adafruit_SSD1306](https://github.com/adafruit/Adafruit_SSD1306)                         | 2.4.5   |
+| [AdaFruit_unified_sensor](https://github.com/adafruit/Adafruit_Sensor)                   | 1.1.4   |
+| [DHT_sesnor_libaray](https://github.com/adafruit/DHT-sensor-library)                     | 1.4.2   |
+| [DS3231](https://github.com/jarzebski/Arduino-DS3231)                                    | 1.0.7   |
+| [Keypad](https://playground.arduino.cc/Code/Keypad/)                                     | 1.0.2   |
+| [LiquidCrystal](https://www.arduino.cc/en/Reference/LiquidCrystal)                       | 1.0.7   |
+| [MFRC522](https://github.com/miguelbalboa/rfid)                                          | 1.4.8   |
+| [Servo](https://www.arduino.cc/reference/en/libraries/servo/)                            | 1.1.7   |
+| [SPI](https://www.arduino.cc/en/reference/SPI)                                           |         |
+| [TimerOne](https://playground.arduino.cc/Code/Timer1/)                                   | 1.1.0   |
+| [TimerThree](https://playground.arduino.cc/Code/Timer1/)                                 | 1.1.0   |
+| [Wire](https://www.arduino.cc/en/reference/wire)                                         |         |
+| [HCSR04-ultrasonic-sensor-lib](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib) | 2.2.0   |
 ## Deployment
 
 1. conenct both cabels to the Atmel and Mega2560
@@ -126,7 +112,23 @@ Yderliger skal der bruges følgende:
 3. hit start without debugging, and let it uplode, an check that it is succesfull
 
 
+## Diagramer
+
+![Flow Chart Loop](Det_intilligente_Hus.png)
+
+![Flow Chart Menu](Det_Intellligente_hus_Menu.png)
+
+## Logic Analyser
+
 ## Responsible People  
+
+![OLED Display I2C](OLED_Display_I2C.png)
+
+![RFID SPI](RFID_SPI.png)
+
+![Singewire Zumed In](Singewire_Zumed_In.png)
+
+![Singewire Zumed In](Singewire_Zumed_Out.png)
 
 
 |Name|E-mail|Role|
