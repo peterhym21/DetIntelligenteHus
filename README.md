@@ -53,37 +53,35 @@ Yderliger skal der bruges følgende:
 
 ## Librayes
 
-[Adafruit_BusIO](https://github.com/adafruit/Adafruit_BusIO)
+[Adafruit_BusIO 1.7.3](https://github.com/adafruit/Adafruit_BusIO)
 
-[Adafruit_GFX_Library](https://github.com/adafruit/Adafruit-GFX-Library)
+[Adafruit_GFX_Library 1.10.10](https://github.com/adafruit/Adafruit-GFX-Library)
 
-[Adafruit_SSD1306](https://github.com/adafruit/Adafruit_SSD1306)
+[Adafruit_SSD1306 2.4.5](https://github.com/adafruit/Adafruit_SSD1306)
 
-[AdaFruit_unified_sensor](https://github.com/adafruit/Adafruit_Sensor)
+[AdaFruit_unified_sensor 1.1.4](https://github.com/adafruit/Adafruit_Sensor)
 
-[DHT_sesnor_libaray](https://github.com/adafruit/DHT-sensor-library)
+[DHT_sesnor_libaray 1.4.2](https://github.com/adafruit/DHT-sensor-library)
 
-[DS3231](https://github.com/jarzebski/Arduino-DS3231)
+[DS3231 1.0.7](https://github.com/jarzebski/Arduino-DS3231)
 
-[Keypad](https://playground.arduino.cc/Code/Keypad/)
+[Keypad 1.0.2](https://playground.arduino.cc/Code/Keypad/)
 
-[LiquidCrystal](https://www.arduino.cc/en/Reference/LiquidCrystal)
+[LiquidCrystal 1.0.7](https://www.arduino.cc/en/Reference/LiquidCrystal)
 
-[MFRC522](https://github.com/miguelbalboa/rfid)
+[MFRC522 1.4.8](https://github.com/miguelbalboa/rfid)
 
-[Servo](https://www.arduino.cc/reference/en/libraries/servo/)
+[Servo 1.1.7](https://www.arduino.cc/reference/en/libraries/servo/)
 
 [SPI](https://www.arduino.cc/en/reference/SPI)
 
-[TimerOne](https://playground.arduino.cc/Code/Timer1/)
+[TimerOne 1.1.0](https://playground.arduino.cc/Code/Timer1/)
 
-[TimerThree](https://playground.arduino.cc/Code/Timer1/)
+[TimerThree 1.1.0](https://playground.arduino.cc/Code/Timer1/)
 
 [Wire](https://www.arduino.cc/en/reference/wire)
 
-[HCSR04-ultrasonic-sensor-lib](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib)
-
-[NewPing](https://playground.arduino.cc/Code/NewPing/)
+[HCSR04-ultrasonic-sensor-lib 2.2.0](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib)
 
 ### Pins
 
