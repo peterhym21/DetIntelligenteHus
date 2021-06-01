@@ -12,7 +12,7 @@ Det skal dog siges at dette er kun en prototype på forslag til hvordan fremtiden
 
 ## Diagrams
 
-![Flow Chart](Documentation/Det_intilligente_Hus.png)
+![Flow Chart](Det_intilligente_Hus.png)
 
 
 ## Hardware Details
