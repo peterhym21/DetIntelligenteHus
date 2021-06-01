@@ -10,6 +10,8 @@
 #include "DHT11/DHT11.h"
 #include "TimeAndDate/TimeAndDate.h"
 #include "Light/Light.h"
+#include "HC-SR04/HC-SR04.h"
+#include "Servos/Servos.h"
 
 
 extern bool Keycard;

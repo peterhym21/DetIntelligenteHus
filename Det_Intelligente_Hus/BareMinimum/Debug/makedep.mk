@@ -4,6 +4,8 @@
 
 DHT11\DHT11.cpp
 
+HC-SR04\HC-SR04.cpp
+
 LCD\LCD.cpp
 
 Light\Light.cpp
@@ -15,6 +17,8 @@ Menu\Menu.cpp
 Moters\FanMoter.cpp
 
 NFC\KeyCardAccess.cpp
+
+Servos\Servos.cpp
 
 src\libraries\Adafruit_BusIO\Adafruit_BusIO_Register.cpp
 
@@ -43,6 +47,8 @@ src\libraries\DHT_sensor_library\DHT.cpp
 src\libraries\DHT_sensor_library\DHT_U.cpp
 
 src\libraries\DS3231\DS3231.cpp
+
+src\libraries\HCSR04_ultrasonic_sensor\src\HCSR04.cpp
 
 src\libraries\Keypad\src\Key.cpp
 

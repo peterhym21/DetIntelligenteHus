@@ -75,6 +75,9 @@ Yderliger skal der bruges følgende:
 
 [Wire](https://www.arduino.cc/en/reference/wire)
 
+[HCSR04-ultrasonic-sensor-lib](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib)
+
+[NewPing](https://playground.arduino.cc/Code/NewPing/)
 
 ## Diagrams
 

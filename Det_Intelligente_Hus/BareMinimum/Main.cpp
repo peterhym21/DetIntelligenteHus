@@ -1,10 +1,9 @@
 ﻿#include "Main.h"
 
-
 bool Keycard = false;
 bool TimeAndDate = false;
 long previousMillis = 0;
-long interval = 1000;
+long intervalDate = 1000;
 DS3231 clock;
 
 void setup()
@@ -31,6 +30,9 @@ void setup()
 	pinMode(RedLED, OUTPUT);
 	pinMode(GreenLED, OUTPUT);
 	pinMode(BlueLED, OUTPUT);
+	pinMode(trigPin, OUTPUT);
+	pinMode(echoPin, INPUT);
+	myservo.attach(servopin);
 	#pragma endregion PinMode
 	
 	display.clearDisplay();
@@ -43,13 +45,15 @@ void loop()
 	if (Keycard)
 	{
 		unsigned long currentMillis = millis();
+
 		DisplayMenu();
 		char key = keypad.getKey();
 		if (key != NO_KEY){
 			Serial.println(key);
 			Menu(key, &TimeAndDate);
 		}
-		if (currentMillis - previousMillis >= interval && TimeAndDate )
+		
+		if (currentMillis - previousMillis >= intervalDate && TimeAndDate )
 		{
 			RTCDateTime dt = GetDateTime();
 			LCDPrintTimeAndDate(dt);
@@ -57,19 +61,19 @@ void loop()
 		}
 		ChangeRGBAnalog();
 		TjekTempInHous();
+		unsigned int distance = GetDistance();
+		SetServo(distance);
 	}
-	
 	if (!Keycard)
 	{
-		if ( !mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial() ) {
+		if ( !mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial() )
+		{
 			return;
 		}
 		String UID = ReadUID();
 		CheckKeyCard(UID, &Keycard);
 		display.clearDisplay();
 	}
-
 }
-
 
 
