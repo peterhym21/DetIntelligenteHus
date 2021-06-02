@@ -19,8 +19,8 @@ void DisplayMenu()
 {
 	display.clearDisplay();
 
-	display.setTextSize(1); // Normal 1:1 pixel scale
-	display.setTextColor(WHITE); // Draw white text
+	display.setTextSize(1);
+	display.setTextColor(WHITE);
 	display.setCursor(0,0);
 	display.println(F("Menu"));
 	display.setCursor(0,10);

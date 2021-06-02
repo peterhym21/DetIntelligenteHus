@@ -1,8 +1,6 @@
 #include "HC-SR04.h"
 
-int trigPin = 3;    // Trigger
-int echoPin = 4;    // Echo
-HCSR04 hc(trigPin,echoPin);
+HCSR04 hc(trigPin, echoPin);
 
 int GetDistance()
 {

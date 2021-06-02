@@ -4,6 +4,7 @@ bool Keycard = false;
 bool TimeAndDate = false;
 long previousMillis = 0;
 long intervalDate = 1000;
+long intervalwelcome = 5000;
 DS3231 clock;
 
 void setup()
@@ -63,6 +64,7 @@ void loop()
 		TjekTempInHous();
 		unsigned int distance = GetDistance();
 		SetServo(distance);
+
 	}
 	if (!Keycard)
 	{
