@@ -1,9 +1,6 @@
 #include "DHT11.h"
 
-
-#define DHTPIN 2
-#define DHTTYPE DHT11
-float SetNumber = 26;
+float SetNumber = 24;
 float Hysterese = 1;
 
 DHT dht(DHTPIN, DHTTYPE);

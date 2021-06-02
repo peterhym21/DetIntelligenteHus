@@ -7,6 +7,25 @@ Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Det_Intelligente_Hus", "Det
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ArduinoCore", "Det_Intelligente_Hus\ArduinoCore\ArduinoCore.cppproj", "{D7E5D8A7-81F0-46E7-A677-D76C01CB2C01}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4B93E80-01FD-4449-9719-EEA24BDED1DA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E324E5FA-F7E5-4D2E-919A-E5ECB5C195F8}"
+	ProjectSection(SolutionItems) = preProject
+		Det_Intellligente_hus_Menu.png = Det_Intellligente_hus_Menu.png
+		Det_intilligente_Hus.png = Det_intilligente_Hus.png
+		OLED Display I2C.sal = OLED Display I2C.sal
+		OLED_Display_I2C.png = OLED_Display_I2C.png
+		RFID SPI.sal = RFID SPI.sal
+		RFID_SPI.png = RFID_SPI.png
+		Singewire.sal = Singewire.sal
+		Singewire_Zumed_In.png = Singewire_Zumed_In.png
+		Singewire_Zumed_Out.png = Singewire_Zumed_Out.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR

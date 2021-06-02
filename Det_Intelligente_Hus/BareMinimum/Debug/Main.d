@@ -62,7 +62,10 @@ Main.d Main.o: .././Main.cpp .././Main.h \
  .././Menu/../LCD/../TimeAndDate/TimeAndDate.h \
  .././Menu/../TimeAndDate/TimeAndDate.h .././DHT11/DHT11.h \
  .././DHT11/../Light/Light.h .././DHT11/../Moters/FanMoter.h \
- .././TimeAndDate/TimeAndDate.h .././Light/Light.h
+ .././TimeAndDate/TimeAndDate.h .././Light/Light.h .././HC-SR04/HC-SR04.h \
+ ..\include\libraries\HCSR04_ultrasonic_sensor\src/HCSR04.h \
+ .././Servos/Servos.h ..\include\libraries\Servo\src/Servo.h \
+ ..\include\libraries\Servo\src/avr/ServoTimers.h
 
 .././Main.h:
 
@@ -211,3 +214,13 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 .././TimeAndDate/TimeAndDate.h:
 
 .././Light/Light.h:
+
+.././HC-SR04/HC-SR04.h:
+
+..\include\libraries\HCSR04_ultrasonic_sensor\src/HCSR04.h:
+
+.././Servos/Servos.h:
+
+..\include\libraries\Servo\src/Servo.h:
+
+..\include\libraries\Servo\src/avr/ServoTimers.h:

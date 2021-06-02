@@ -15,7 +15,7 @@ The circuit:
 * LCD VCC/VDD pin to 5V
 * 10K resistor:
 * ends to +5V and ground
-* wiper to LCD VO pin		//(pin 3)
+* wiper to LCD VO pin
 */
 
 extern int rs, en, d4, d5, d6, d7;
