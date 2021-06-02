@@ -2,19 +2,19 @@
 
 ## Introduktion / Motivation
 
-Det intelligente Hus for mig, er at gøre ting så nemt at anvende for den enklete bruge,
-og af den grund er dette et udksat af hvad jeg ville mene der skal være i det intelligente hus.
-nogle af de ting ville være en central display med en keypad til at kunne ændre temratur, blæser hasighed. Et display til at kunne se tempraturem, tiden, dato, eller andet nytting info. Knapper til at åbne vinduer/ døre. Keycard til at lås døre op. Justerbare RGB LED lys.
+Det intelligente Hus for mig, er at gÃ¸re ting sÃ¥ nemt at anvende for den enklete bruge,
+og af den grund er dette et udksat af hvad jeg ville mene der skal vÃ¦re i det intelligente hus.
+nogle af de ting ville vÃ¦re en central display med en keypad til at kunne Ã¦ndre temratur, blÃ¦ser hasighed. Et display til at kunne se tempraturem, tiden, dato, eller andet nytting info. Knapper til at Ã¥bne vinduer/ dÃ¸re. Keycard til at lÃ¥s dÃ¸re op. Justerbare RGB LED lys.
 
-Dette er selvfølig kun toppen af det, men neden under har jeg en præciserede liste over det ting jeg gerne vil lave.
+Dette er selvfÃ¸lig kun toppen af det, men neden under har jeg en prÃ¦ciserede liste over det ting jeg gerne vil lave.
 
-Det skal dog siges at dette er kun en prototype på forslag til hvordan fremtidens huse kunne blive til
+Det skal dog siges at dette er kun en prototype pÃ¥ forslag til hvordan fremtidens huse kunne blive til
 
 ## Hardware Details
 
 Til dette projekt er der blevet brugt en Elegoo MEGA2560 R3, og en ATATMEL-ICE-BASIC som bliver brugt til Debuggeing af koden.
 
-Yderliger skal der bruges følgende:
+Yderliger skal der bruges fÃ¸lgende:
 
 - Fan Blade
 - DC Moter
@@ -22,15 +22,15 @@ Yderliger skal der bruges følgende:
 - Power Suply Moduel
 - Doide Rectifier
 - Keypad
-- RFIO-RC522 (NFC / RFID læser)
+- RFIO-RC522 (NFC / RFID lÃ¥ser)
 - LCD Display
 - OLED Display
 - DS3231 
 - DHT11
 - RGB LED
-- Rød, Grøn, Blå singe LED
+- RÃ¸d, GrÃ¸n, BlÃ¥ singe LED
 - 6 220 Ohm Modstand
-- 4 Potentiometere
+- 4 Potentiometeres
 - Servo moter
 - HC-SR04 ultralyds sensor
 - en masse ledninger
@@ -40,32 +40,32 @@ Yderliger skal der bruges følgende:
 - DHT11: Pin 2
 - HC-SR04: Triger Pin 3, Echo Pin 4
 - LCD
-        - LCD RS pin to digital pin 22
-        - LCD Enable pin (E) to digital pin 23
-        - LCD D4 pin to digital pin 24
-        - LCD D5 pin to digital pin 25
-        - LCD D6 pin to digital pin 26
-        - LCD D7 pin to digital pin 27
-        - LCD R/W pin to ground
-        - LCD VSS pin to ground
-        - LCD VCC/VDD pin to 5V
-        - 10K resistor:
-        - ends to +5V and ground
-        - wiper to LCD VO
+    - LCD RS pin to digital pin 22
+    - LCD Enable pin (E) to digital pin 23
+    - LCD D4 pin to digital pin 24
+    - LCD D5 pin to digital pin 25
+    - LCD D6 pin to digital pin 26
+    - LCD D7 pin to digital pin 27
+    - LCD R/W pin to ground
+    - LCD VSS pin to ground
+    - LCD VCC/VDD pin to 5V
+    - 10K resistor:
+    - ends to +5V and ground
+    - wiper to LCD VO
 - Light
-        - RedRGB pin 42
-        - GreenRGB pin 43
-        - BlueRGB pin 44
-        - RedLED pin 9
-        - GreenLED pin 7
-        - BlueLED pin 8
+    - RedRGB pin 42
+    - GreenRGB pin 43
+    - BlueRGB pin 44
+    - RedLED pin 9
+    - GreenLED pin 7
+    - BlueLED pin 8
 - DC moter Pin 12
 - Keypad:
-        - rowPins: 32, 33, 34, 35 //connect to the row pinouts of the keypad
-        - colPins: 36, 37, 38, 39 //connect to the column pinouts of the keypad
+    - rowPins: 32, 33, 34, 35 //connect to the row pinouts of the keypad
+    - colPins: 36, 37, 38, 39 //connect to the column pinouts of the keypad
 - NFC / RFID
-        - RST_PIN   5
-        - SS_PIN    53
+    - RST_PIN   5
+    - SS_PIN    53
 - servopin pin 10
 - OLED pin 20,21 (SCL og SDA)
 - Real time clock pin SCL og SDA
@@ -99,6 +99,52 @@ Yderliger skal der bruges følgende:
 | [TimerThree](https://playground.arduino.cc/Code/Timer1/)                                 | 1.1.0   |
 | [Wire](https://www.arduino.cc/en/reference/wire)                                         |         |
 | [HCSR04-ultrasonic-sensor-lib](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib) | 2.2.0   |
+
+
+
+## Diagramer
+
+Som set pÃ¥ diagrammet er dette det main loop
+hvor den vil stÃ¥ og kÃ¸rer igennem
+
+![Flow Chart Loop](Det_intilligente_Hus.png)
+
+Dette er en oversigt over selve Menuen
+
+![Flow Chart Menu](Det_Intellligente_hus_Menu.png)
+
+## Logic Analyser
+<br>
+
+### I2C
+
+1. start Bit (SS SCL)
+2. fÃ¸rst 7 bit 
+3. read write bit
+4. Ack or Nak
+5. Master Read/ write
+
+
+![OLED Display I2C](OLED_Display_I2C.png)
+
+### SPI
+CPOL = 0 CPHA = 0
+
+![RFID SPI](RFID_SPI.png)
+
+### Singel Wire (1 Wire)
+1. MCU sends out start signal (low)
+2. Pull up and wait for sensor
+3. DHT respons (low)
+4. DHT Pull up (get ready to read data)
+5. DHT send 40 Bit
+6. sensor pulls down to complet 
+
+![Singewire Zumed In](Singewire_Zumed_In.png)
+
+![Singewire Zumed In](Singewire_Zumed_Out.png)
+
+
 ## Deployment
 
 1. conenct both cabels to the Atmel and Mega2560
@@ -106,24 +152,7 @@ Yderliger skal der bruges følgende:
 3. hit start without debugging, and let it uplode, an check that it is succesfull
 
 
-## Diagramer
-
-![Flow Chart Loop](Det_intilligente_Hus.png)
-
-![Flow Chart Menu](Det_Intellligente_hus_Menu.png)
-
-## Logic Analyser
-
 ## Responsible People  
-
-![OLED Display I2C](OLED_Display_I2C.png)
-
-![RFID SPI](RFID_SPI.png)
-
-![Singewire Zumed In](Singewire_Zumed_In.png)
-
-![Singewire Zumed In](Singewire_Zumed_Out.png)
-
 
 |Name|E-mail|Role|
 |-|-|-|
