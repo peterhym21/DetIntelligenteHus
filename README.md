@@ -24,6 +24,15 @@ Det skal dog siges at dette er kun en prototype på forslag til hvordan fremtide
 - [X] RGB LED som kan styres for hver farve.
 - [X] afstands sensor til at åbne døre når du er tæt nok på.
 
+### Eventuelle tilføjelser hvis der bliver tid til dem
+
+- [ ] Man kan ændre på hvad den perfekte temp er så blæser og radiater slukker og tænder efter det
+- [ ] Man Kan Låse døre op med fler Key cards
+- [ ] RGB LED kan også blive styret i menuen. 
+- [ ] Manuelt styre blæser fra menuen.
+- [ ] knapper til at styre servo og åbne og lukke vinduer.
+- [ ] Man kan vælge og tilføjde et nyt keycard der kan låse op
+- [ ] RGB LED tænder og slukker efter hvor lydst det er
 
 ## Solution
 
@@ -32,10 +41,10 @@ Jeg har i dette projekt fokuseret på at kunne have tid til at fordybe mig i de 
 Med henblik på at sætte det hele op så det der let at kunne lave ændringer og tilføje nye elementer i programmet.
 Derfor har jeg valgt at bruge FBF Folder By Feature strukturen 
 
-![HIPO Digram overall](Solution.png)
+
 
 ### Video af borads
-
+![Video of menu](Menu.mp4)
 
 ## Hardware Details
 
