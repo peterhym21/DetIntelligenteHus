@@ -157,7 +157,7 @@ Dette er en oversigt over selve Menuen
 ## Logic Analyser
 <br>
 
-### I2C
+### I2C (OLED Display)
 
 1. start Bit (SS SCL)
 2. først 7 bit 
@@ -168,12 +168,12 @@ Dette er en oversigt over selve Menuen
 
 ![OLED Display I2C](OLED_Display_I2C.png)
 
-### SPI
+### SPI (NFC / RFID Reader)
 CPOL = 0 CPHA = 0
 
 ![RFID SPI](RFID_SPI.png)
 
-### Singel Wire (1 Wire)
+### Singel Wire (1 Wire) (DHT11 Tempratur And HUmidity sensor)
 1. MCU sends out start signal (low)
 2. Pull up and wait for sensor
 3. DHT respons (low)
