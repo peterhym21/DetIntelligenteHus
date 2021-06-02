@@ -1,7 +1,7 @@
 #include "Servos.h"
 
 Servo myservo; // create servo object to control a servo
-int val = 30;
+int val = 50;
 
 
 void SetServo(int cm)

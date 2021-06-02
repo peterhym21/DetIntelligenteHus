@@ -10,6 +10,32 @@ Dette er selvfølig kun toppen af det, men neden under har jeg en præciserede l
 
 Det skal dog siges at dette er kun en prototype på forslag til hvordan fremtidens huse kunne blive til
 
+## Krav
+
+- [X] En NFC key der kan låse døre op (Låser Huset op), og giver adgang til menuen, samt en velkommst.
+  - [X] 1 key til at slå op
+  - [X] Udksiver en velkoms hvis det er rigtigt
+- [X] Display med Menu / en central Hub hvor man ville kunne styre nogle af tingende i huset.
+  - [X] En Keypad til at kunne kontorllere og vælge ting i Menuen.
+  - [X] LCD displays som cykler gennem fx. dato, tid og tempratur, efter hvad man vælger i menuen.
+- [X] en tempratur sensor / humidity sensor.
+  - [X] en blæser der styres af tempraturen.
+  - [X] En Rød LED for at visualisere at en rediator bliver tændt
+- [X] RGB LED som kan styres for hver farve.
+- [X] afstands sensor til at åbne døre når du er tæt nok på.
+
+
+## Solution
+
+Jeg har i dette projekt fokuseret på at kunne have tid til at fordybe mig i de enkelte emner jeg har udvalgt i kravendne.
+
+Med henblik på at sætte det hele op så det der let at kunne lave ændringer og tilføje nye elementer i programmet.
+Derfor har jeg valgt at bruge FBF Folder By Feature strukturen 
+![HIPO Digram overall](Solution.png)
+
+### Video af borads
+
+
 ## Hardware Details
 
 Til dette projekt er der blevet brugt en Elegoo MEGA2560 R3, og en ATATMEL-ICE-BASIC som bliver brugt til Debuggeing af koden.
@@ -104,7 +130,12 @@ Yderliger skal der bruges følgende:
 
 ## Diagramer
 
-Som set på diagrammet er dette det main loop
+Et Overblick over selve programet
+
+![HIPO Digram overall](HIPO.png)
+
+
+Som set på Flow Charted er dette det main loop
 hvor den vil stå og kører igennem
 
 ![Flow Chart Loop](Det_intilligente_Hus.png)
