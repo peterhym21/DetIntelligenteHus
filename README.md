@@ -31,6 +31,7 @@ Jeg har i dette projekt fokuseret på at kunne have tid til at fordybe mig i de 
 
 Med henblik på at sætte det hele op så det der let at kunne lave ændringer og tilføje nye elementer i programmet.
 Derfor har jeg valgt at bruge FBF Folder By Feature strukturen 
+
 ![HIPO Digram overall](Solution.png)
 
 ### Video af borads
